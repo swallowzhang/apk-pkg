@@ -1,0 +1,16 @@
+group 'org.kunyang.tools'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+repositories {
+//    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+//    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'com.android.tools.build:gradle:1.2.3'
+}
