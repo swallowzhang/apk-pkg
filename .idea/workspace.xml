@@ -2,81 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="427410e2-e23f-43fa-8c91-c9dbdcd87b0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle.properties" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\.idea\libraries\Gradle__org_codehaus_groovy_groovy_all_2_3_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\main\org\kunyang\tools\PackagePlugin$_apply_closure1_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\main\org\kunyang\tools\PackagePlugin$_apply_closure1_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\main\org\kunyang\tools\PackagePlugin$_apply_closure1_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\main\org\kunyang\tools\PackagePlugin$_apply_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure2_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure2_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure2_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest$_testGetTaskName_closure2_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\classes\test\PackagePluginTest.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\classes\PackagePluginTest.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\css\base-style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\js\report.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\reports\tests\packages\default-package.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\test-results\TEST-PackagePluginTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\test-results\binary\test\output.bin" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\test-results\binary\test\output.bin.idx" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\test-results\binary\test\results.bin" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1053845739533640562_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1259509135489934508_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1387405504570859588_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1590814429058417572_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1613638154244916945_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1793775018188558866_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1813397476244225966_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_1991131374273776839_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2297618966719405933_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2316248683817833108_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2497981002628583526_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2728608018139151230_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2782662144813027522_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_2872399495974421376_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_3224435665216862073_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_343947149772385676_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_3711307932211770685_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_3934106007970375495_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_3937676071693561221_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4178299929662878250_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4183569037222137952_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4616289007671485152_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4668648142676953039_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4755726505848118079_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_4811326626594977659_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_5356823811113527367_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_5750800784315161598_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_6105290720633413524_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_64664091949456365_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_6608077853051994449_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_6949711337675292003_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_7180668514600139875_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_7514929948852008327_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_768035408444989041_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_8107774226062444061_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_833178223738059064_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_8347002614334645678_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_8352317300167882831_tmp" afterPath="" />
-      <change type="DELETED" beforePath="E:\code\gradle\ApkPkgPlugin\build\tmp\test\jar_extract_9090025667524225909_tmp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePlugin$_apply_closure1.class" afterPath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePlugin$_apply_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePlugin.class" afterPath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePluginExtension.class" afterPath="$PROJECT_DIR$/build/classes/main/org/kunyang/tools/PackagePluginExtension.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApkPkgPlugin.iml" afterPath="$PROJECT_DIR$/ApkPkgPlugin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/org/kunyang/tools/PackagePlugin.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/org/kunyang/tools/PackagePlugin.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/PackagePluginTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/PackagePluginTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ApkPkgPlugin.iws" />
@@ -272,21 +197,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradle.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.047505938">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.095011875">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -746,11 +671,11 @@
         <option value="$PROJECT_DIR$/src/test/groovy/PackagePluginTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/gradle-plugins/org.kunyang.tools.apk-pkg.properties" />
         <option value="$PROJECT_DIR$/src/main/groovy/org/kunyang/tools/PackagePluginExtension.groovy" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/groovy/PackagePluginTest.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/org/kunyang/tools/PackagePlugin.groovy" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1340,16 +1265,23 @@
       <created>1466653644521</created>
       <option name="number" value="Default" />
       <updated>1466653644521</updated>
-      <workItem from="1466653645738" duration="25384000" />
+      <workItem from="1466653645738" duration="25465000" />
     </task>
+    <task id="LOCAL-00001" summary="Test ok">
+      <created>1466764993193</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1466764993193</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25384000" />
+    <option name="totallyTimeSpent" value="25465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1444" height="835" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1358,7 +1290,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48885587" sideWeight="0.5057887" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986626" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986626" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48885587" sideWeight="0.4942113" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1388,6 +1320,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1438,14 +1374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1483,8 +1411,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.047505938">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.095011875">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
