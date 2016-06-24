@@ -1,16 +1,93 @@
+//发布这个plugin到PluginPortal需要用plugin-publish-plugin插件
+buildscript{
+    repositories {
+        maven{
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.gradle.publish:plugin-publish-plugin:0.9.4"
+    }
+}
+
 group 'org.kunyang.tools'
 version '1.0-SNAPSHOT'
 
+apply plugin: "com.gradle.plugin-publish"
 apply plugin: 'groovy'
 
+//插件依赖
 repositories {
-//    mavenCentral()
     jcenter()
 }
 
 dependencies {
     compile gradleApi()
-//    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    //用于测试
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile 'com.android.tools.build:gradle:1.2.3'
+}
+
+// custom task for creating source jars
+task sourceJar(type: Jar, dependsOn: classes) {
+    classifier = 'source'
+    from sourceSets.main.allSource
+}
+
+// add source jar tasks as artifacts
+artifacts { archives sourceJar }
+
+//插件发布信息
+pluginBundle {
+    // These settings are set for the whole plugin bundle
+    website = 'http://www.kunyang.org'
+    vcsUrl = 'https://github.com/swallowzhang/apk-pkg.git'
+
+    // tags and description can be set for the whole bundle here, but can also
+    // be set / overridden in the config for specific plugins
+    description = 'Name the output apk files'
+
+    // The plugins block can contain multiple plugin entries.
+    //
+    // The name for each plugin block below (greetingsPlugin, goodbyePlugin)
+    // does not affect the plugin configuration, but they need to be unique
+    // for each plugin.
+
+    // Plugin config blocks can set the id, displayName, version, description
+    // and tags for each plugin.
+
+    // id and displayName are mandatory.
+    // If no version is set, the project version will be used.
+    // If no tags or description are set, the tags or description from the
+    // pluginBundle block will be used, but they must be set in one of the
+    // two places.
+
+    plugins {
+
+        // apk pakage plugin
+        apkPkgPlugin {
+            id = 'org.kunyang.tools.apk-pkg'
+            displayName = 'Apk package plugin'
+            tags = ['apk', 'pakage', 'name']
+        }
+
+    }
+
+    // Optional overrides for Maven coordinates.
+    // If you have an existing plugin deployed to Bintray and would like to keep
+    // your existing group ID and artifact ID for continuity, you can specify
+    // them here.
+    //
+    // As publishing to a custom group requires manual approval by the Gradle
+    // team for security reasons, we recommend not overriding the group ID unless
+    // you have an existing group ID that you wish to keep. If not overridden,
+    // plugins will be published automatically without a manual approval process.
+    //
+    // You can also override the version of the deployed artifact here, though it
+    // defaults to the project version, which would normally be sufficient.
+
+    mavenCoordinates {
+        groupId = "org.kunyang.tools"
+        artifactId = "apk-pkg"
+    }
 }

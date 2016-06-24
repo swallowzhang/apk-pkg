@@ -2,6 +2,7 @@ package org.kunyang.tools
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.invocation.Gradle
 
 /**
  * 插件入口，当该插件被加载时apply方法将被调用
@@ -9,80 +10,100 @@ import org.gradle.api.Project
  * @since 2016.6.23
  */
 class PackagePlugin implements Plugin<Project> {
-    private Project project
+    private Project project;
 
-    @Override
-    void apply(Project project) {
-        this.project = project
-        project.extensions.create('apkPkg', PackagePluginExtension)
-
-        project.afterEvaluate {
-            //Package beta apk, modifyVersion++, betaVersion++
-            project.tasks.assembleBeta.doLast {
-                def newModifyVersion = Integer.parseInt(getModifyVersion()) + 1
-                def newPakageTime = getNow()
-                def versionName = project.extensions.android.defaultConfig.versionName
-                def betaVersion = Integer.parseInt(getBetaVersion()) + 1
-                updatePropFile(newModifyVersion, newPakageTime, versionName, betaVersion)
-            }
-
-            //Package release apk, modifyVersion++
-            project.tasks.assembleRelease.doLast {
-                def newModifyVersion = Integer.parseInt(getModifyVersion()) + 1
-                def newPakageTime = getNow()
-                def versionName = project.extensions.android.defaultConfig.versionName
-                def betaVersion = getBetaVersion()
-                updatePropFile(newModifyVersion, newPakageTime, versionName, betaVersion)
-            }
-
-            //Package debug apk
-            project.tasks.assembleDebug.doLast {
-                //Do nothing
-            }
-        }
-
-        //Rename
-        project.android.applicationVariants.all { variant ->
-            nameApk(variant)
-        }
-    }
-
-    def getModifyVersion(versionName) {
-        def lastPackTime = getProperty('PACK_TIME')
-        def lastVersion = getProperty('LAST_VERSION')
-        def modifyVersion = getProperty('MODIFIED_VERSION')
-        if (!getNow().equals(lastPackTime) || !lastVersion.equals(versionName))
-            modifyVersion = "1";
-        return modifyVersion;
+    def getPropFile() {
+        return new File(project.getProjectDir().toString() + '\\buildCfg.properties')
     }
 
     def updatePropFile(modifyVersion, packageTime, versionName) {
-        setProperty('MODIFIED_VERSION', modifyVersion)
-        setProperty('PACK_TIME', packageTime)
-        setProperty('LAST_VERSION', versionName)
+        File propFile = getPropFile();
+        if (!propFile.exists())
+            return;
+        def printWriter = propFile.newPrintWriter();
+        printWriter.write("# 修正版本号，每天清零" + '\n');
+        printWriter.write('MODIFIED_VERSION = ' + modifyVersion + '\n');
+        printWriter.write('PACK_TIME = ' + packageTime + '\n');
+        printWriter.write('LAST_VERSION = ' + versionName + '\n');
+        printWriter.flush()
+        printWriter.close()
     }
 
     def getNow() {
         return new Date().format("yyyyMMdd")
     }
 
+    def getModifyVersion(versionName) {
+        File propFile = getPropFile();
+        //If the file not exists, create it.
+        if (!propFile.exists()) {
+            propFile.createNewFile();
+            updatePropFile(1, getNow(), project.extensions.android.defaultConfig.versionName, 1);
+        }
+        def Properties prop = new Properties();
+        prop.load(new FileInputStream(propFile));
+        def lastPackTime = prop.getProperty('PACK_TIME');
+        def lastVersion = prop.getProperty('LAST_VERSION');
+        def buildVerion = prop.getProperty('MODIFIED_VERSION');
+        if (!getNow().equals(lastPackTime) || !lastVersion.equals(versionName))
+            buildVerion = "1";
+        return buildVerion;
+    }
+
+    def getMergedFlavorName(variant) {
+        String mergeFlavorName = '-'
+        def flavorDimensionList = project.android.flavorDimensionList;
+        if (flavorDimensionList != null) {
+            def dimensionsNum = flavorDimensionList.size()
+            for (int i=0; i<dimensionsNum; i++) {
+                def flavor = variant.productFlavors[i]
+                if (flavor == null)
+                    continue
+                mergeFlavorName += flavor.name + '-'
+            }
+            mergeFlavorName = mergeFlavorName.substring(0, mergeFlavorName.lastIndexOf('-'))
+        }
+        return mergeFlavorName;
+    }
+
+    def isAssemble(buildType) {
+        Gradle gradle = project.getGradle()
+        String  tskReqStr = gradle.getStartParameter().getTaskRequests().toString()
+        println 'kkkkkk  '+tskReqStr + '  '+buildType
+        return tskReqStr.contains('assemble') && tskReqStr.toLowerCase().contains(buildType)
+    }
+
     def nameApk(variant) {
         def buildType = variant.buildType.name;
-        def outputFile = variant.outputs[0].outputFile;
-        def versionName = project.extensions.android.defaultConfig.versionName;
+        def outputFile = variant.outputs[0].outputFile
+        def versionName = variant.mergedFlavor.versionName;
+        def mergedFlavorName = getMergedFlavorName(variant)
         def pkgTime = getNow();
-        def modifyVersion = getModifyVersion();
-        def fileName = new StringBuilder(project.apkPkg.nameHead)
-                .append("_")
-                .append(versionName)
-                .append(".build-")
-                .append(pkgTime)
-                .append(modifyVersion)
-                .append(".")
-                .append(buildType)
-                .append(".apk")
-                .build()
+        def modifyVersion = getModifyVersion(versionName)
+        def fileName = project.apkPkg.nameHead +
+                '_' +
+                versionName +
+                mergedFlavorName+
+                ".build-"+
+                pkgTime+
+                modifyVersion+
+                "."+
+                buildType+
+                ".apk"
+        println 'gggggggg   '+fileName
         variant.outputs[0].outputFile = new File(outputFile.parent, fileName)
-        updatePropFile(++modifyVersion, pkgTime, versionName);
+        if (isAssemble(buildType))
+            modifyVersion++
+        updatePropFile(modifyVersion, pkgTime, versionName)
+    }
+
+    @Override
+    void apply(Project project) {
+        this.project = project;
+        project.extensions.create('apkPkg', PackagePluginExtension)
+
+        project.android.applicationVariants.all { variant->
+            nameApk(variant)
+        }
     }
 }

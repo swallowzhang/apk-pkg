@@ -19,15 +19,6 @@ class PackagePluginTest {
             alpha{
 
             }
-            aaaa{
-
-            }
-            bbbb{
-
-            }
-            ccc{
-
-            }
         }
 
         for (String name:project.tasks.getNames()){
